@@ -17,13 +17,14 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  url: "postgres://qeuwiomsyqxayp:6338ec419ff0dbc3456b2b82ad76de98ee84301a79758b1fa9e88bea129d819a@ec2-52-200-119-0.compute-1.amazonaws.com:5432/desm7hunafldnk"
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: pizza_app_development
+  database: desm7hunafldnk
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +58,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: pizza_app_test
+  database: desm7hunafldnk
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
