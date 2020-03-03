@@ -5,13 +5,16 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/service/.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/service/log/development.log
+/service/tmp/*
+!/service/log/.keep
+!/service/tmp/.keep
 
-.byebug_history
-.idea/
+/service/.byebug_history
+
+/.idea/
+/service/.idea/
+/client/.idea/
