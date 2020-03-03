@@ -7,7 +7,7 @@ class Api::Products::SpaghettiController < Api::Products::OrderController
   end
 
   def show
-    super(Spaghetti)
+    super(Spaghetti, params)
   end
 
   def create

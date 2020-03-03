@@ -1,0 +1,6 @@
+test:
+        pizza_type: hawaiian
+        cheese: mozzarella
+        sauce: bechamel
+        crust: thin
+        size: personal

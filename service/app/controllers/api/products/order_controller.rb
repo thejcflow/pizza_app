@@ -3,8 +3,8 @@ class Api::Products::OrderController < ApplicationController
     render(json: classs.all)
   end
 
-  def show(classs)
-    selected_order = classs.find(params[:id])
+  def show(classs, params)
+    selected_order = classs.find_by(id: params[:id])
     if selected_order.nil?
       render(json: {error: "#{classs.name} order not found."}, status: 404)
     else
@@ -23,7 +23,7 @@ class Api::Products::OrderController < ApplicationController
       OrderUpdaterJob.set(wait: (wait_time*4).seconds).perform_later(order_class_name, order.id)
       OrderUpdaterJob.set(wait: (wait_time*5).seconds).perform_later(order_class_name, order.id)
 
-      render(json: order, status: 200)
+      render(json: order, status: 201)
     else
       render(json: { errors: order.errors }, status: 400)
     end

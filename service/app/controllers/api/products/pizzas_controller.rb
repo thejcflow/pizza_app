@@ -7,7 +7,7 @@ class Api::Products::PizzasController < Api::Products::OrderController
   end
 
   def show
-    super(Pizza)
+    super(Pizza, params)
   end
 
   def create

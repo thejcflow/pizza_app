@@ -7,7 +7,7 @@ class Api::Products::LasagnaController < Api::Products::OrderController
   end
 
   def show
-    super(Lasagna)
+    super(Lasagna, params)
   end
 
   def create
