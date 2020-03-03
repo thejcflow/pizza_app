@@ -1,0 +1,2 @@
+class Spaghetti < ApplicationRecord
+end
